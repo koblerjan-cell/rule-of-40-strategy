@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rule of 40 Strategy</title>
+<meta name="description" content="Draft investment thesis and expanded analysis: SaaS turnaround, platform consolidation and AI-modernised services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f4;--surface:#fff;--ink:#1c1b19;--muted:#6b675f;--line:#e7e2d9;--accent:#1f5f4a;--accent-soft:#e6f0eb;--warn:#fbf3e0;--warn-line:#e8d49a;--code:#f1ede5}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--surface:#1c1c1a;--ink:#ecebe6;--muted:#a09c92;--line:#2e2d29;--accent:#6fcfae;--accent-soft:#1d2d27;--warn:#2a2518;--warn-line:#5c4f27;--code:#242320}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.layout{display:grid;grid-template-columns:260px minmax(0,1fr);max-width:1180px;margin:0 auto;gap:56px;padding:0 24px}
+aside{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;padding:48px 0}
+aside .brand{font:600 13px Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+aside a{display:flex;gap:10px;padding:6px 10px;margin-left:-10px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:14px;line-height:1.4}
+aside a span{font-variant-numeric:tabular-nums;opacity:.6;min-width:20px}
+aside a:hover,aside a.on{background:var(--accent-soft);color:var(--accent)}
+main{padding:56px 0 96px;min-width:0}
+header.hero{padding-bottom:36px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.kicker{font:600 13px Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font:600 clamp(34px,5vw,54px)/1.08 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:10px 0 18px}
+header.hero blockquote{margin:20px 0 0;padding:14px 18px;background:var(--warn);border:1px solid var(--warn-line);border-radius:12px;font-size:14px;color:var(--ink)}
+header.hero blockquote p{margin:0}
+section{padding-top:48px}
+h2{font:600 30px/1.2 Fraunces,Georgia,serif;letter-spacing:-.01em;margin:0 0 18px;display:flex;align-items:baseline;gap:14px}
+h2 .num{font:600 14px Inter;color:var(--accent);background:var(--accent-soft);padding:3px 9px;border-radius:99px}
+h3{font-size:18px;margin:32px 0 8px;font-weight:600}
+p,li{max-width:70ch}
+ul,ol{padding-left:22px}li{margin:4px 0}
+a{color:var(--accent)}
+strong{font-weight:600}
+code{background:var(--code);padding:2px 6px;border-radius:5px;font-size:.9em}
+em{color:var(--muted)}
+blockquote{margin:16px 0;padding:4px 18px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:20px 0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14.5px;line-height:1.5;display:block;overflow-x:auto}
+th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);min-width:120px}
+th{background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:13px}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600}
+ul:has(input[type=checkbox]){list-style:none;padding-left:0}
+hr{border:0;border-top:1px solid var(--line);margin:48px 0 16px}
+footer em{font-size:13px}
+@media(max-width:860px){.layout{grid-template-columns:1fr;gap:0}aside{display:none}main{padding-top:32px}h2{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside><div class="brand">Rule of 40 Strategy</div>
+<a href="#1-the-thesis-in-one-paragraph"><span>01</span>The thesis in one paragraph</a>
+<a href="#2-is-rule-of-40-the-right-screen"><span>02</span>Is "Rule of 40" the right screen?</a>
+<a href="#3-sub-strategy-a-saas-secondary-buyout-turnaround"><span>03</span>Sub-strategy A — SaaS secondary buyout &amp; turnaround</a>
+<a href="#4-sub-strategy-b-platform-consolidation-constellation"><span>04</span>Sub-strategy B — Platform / consolidation ("Constellation")</a>
+<a href="#5-sub-strategy-c-service-business-buyout-ai-modernization"><span>05</span>Sub-strategy C — Service business buyout + AI modernization</a>
+<a href="#6-cross-cutting-mechanics"><span>06</span>Cross-cutting mechanics</a>
+<a href="#7-illustrative-returns-for-sub-strategy-a"><span>07</span>Illustrative returns for sub-strategy A</a>
+<a href="#8-diligence-checklist-a-adaptable-to-c"><span>08</span>Diligence checklist (A, adaptable to C)</a>
+<a href="#9-key-risks-mitigants"><span>09</span>Key risks &amp; mitigants</a>
+<a href="#10-suggested-sequencing"><span>10</span>Suggested sequencing</a>
+<a href="#11-open-questions-for-discussion"><span>11</span>Open questions for discussion</a>
+<a href="#12-suggested-next-steps"><span>12</span>Suggested next steps</a>
+</aside>
+<main>
+<header class="hero"><div class="kicker">Fund IV · Idea repository</div>
+<h1>Rule of 40 Strategy</h1>
+
+<blockquote>
+<p><strong>Status:</strong> working draft for discussion. The original thesis is Jan's (<a href="original-draft.docx">original-draft.docx</a>); the analysis, critique and illustrative numbers below were added by Claude. <strong>Nothing here is investment advice. Market benchmarks and all figures are illustrative or from general knowledge and have not been verified against current data — check them before relying on them.</strong></p>
+</blockquote>
+
+</header>
+<section><h2 id="1-the-thesis-in-one-paragraph"><span class="num">01</span>The thesis in one paragraph</h2>
+<p>Buy control of regional B2B companies that are fundamentally sound but under-managed: profitable or near break-even, growing at 30–40% (too slow for VC, too good to ignore). Rather than a passive minority stake, use a hybrid PE / venture-building model — install talent, fix finance and cap table, restructure costs — to force a step-change in value. "Rule of 40" is a loose screen (growth % + margin % ≈ 40), not a hard criterion.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>A. SaaS secondary buyout &amp; turnaround</th>
+<th>B. Platform / consolidation</th>
+<th>C. Service business + AI modernization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target</td>
+<td>Regional B2B SaaS, ~break-even, 30–40% growth, often VC-backed</td>
+<td>Several turned-around A-companies + bolt-ons</td>
+<td>One regional non-software service business (local services, legal, accounting, insurance)</td>
+</tr>
+<tr>
+<td>Core lever</td>
+<td>Fix the <em>company</em> (CFO, talent, cap table, costs)</td>
+<td>Multiple arbitrage + shared ops stack</td>
+<td>Digitize / automate an analog operation</td>
+</tr>
+<tr>
+<td>Maturity</td>
+<td>Most defined</td>
+<td>Economics resemble PE roll-up</td>
+<td>Most exploratory</td>
+</tr>
+<tr>
+<td>Key fit question</td>
+<td>Is it a fund-sized deal?</td>
+<td>Does the vehicle allow it?</td>
+<td>Is software/AI really the moat?</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section><h2 id="2-is-rule-of-40-the-right-screen"><span class="num">02</span>Is "Rule of 40" the right screen?</h2>
+<p>The loose use is sensible, but it hides three traps worth making explicit:</p>
+<ol>
+<li><strong>Growth and margin are not interchangeable.</strong> A 10% grower at 30% margin and a 40% grower at 0% margin both score "40" but have very different value and turnaround paths. Your thesis is clearly about the second profile (growth with room to fix margin). Say so: screen on <em>growth ≥ ~25–30% </em><em>and</em><em> margin ≥ roughly −10%</em>, not on the sum.</li>
+<li><strong>Growth quality matters more than level.</strong> Check net revenue retention, gross margin, and whether growth is bought (discounting, services-heavy) or organic. 35% growth from 150% NRR is a different asset from 35% growth from new-logo discounting.</li>
+<li><strong>Why is it stuck?</strong> The thesis only works if the diagnosis is <em>management/capital-structure</em>, not <em>product/market</em>. That diagnosis is the single most important thing to test in diligence (see §8).</li>
+</ol>
+<p><strong>Suggested scorecard</strong> (score 1–5, weight to taste): growth quality · gross margin · NRR/logo churn · customer concentration · founder situation (fatigue vs. misaligned) · cap-table complexity · fixable-by-us share of the gap to "Rule of 40".</p>
+</section>
+<section><h2 id="3-sub-strategy-a-saas-secondary-buyout-turnaround"><span class="num">03</span>Sub-strategy A — SaaS secondary buyout &amp; turnaround</h2>
+<h3 id="why-it-can-work">Why it can work</h3>
+<ul>
+<li><strong>Forced-seller dynamics.</strong> Many 2020–22 vintage VC-backed SaaS companies raised at valuations the market no longer supports. Their investors need distributions or write-offs, and founders are tired. A credible, fast, certain offer has real value.</li>
+<li><strong>Founder-first sourcing</strong> sidesteps competitive VC-syndicate processes and gets the founder aligned before the cap table is engaged.</li>
+<li><strong>Fixable gaps are cheap to fix</strong> (CFO, pricing, sales discipline) relative to the value unlocked.</li>
+</ul>
+<h3 id="where-it-can-break">Where it can break</h3>
+<ul>
+<li><strong>Adverse selection.</strong> Why is this company available at a discount? Often because the growth is not durable. Mitigate with cohort-level diligence, not headline ARR.</li>
+<li><strong>Preference stacks and drag/tag rights.</strong> Even "less rigid" stacks can block a deal if one investor holds out. Map every holder's incentives (some prefer a write-off to a discounted sale for fund-accounting reasons).</li>
+<li><strong>Founder retention after liquidity.</strong> A founder who takes secondary and is fatigued may mentally leave. Structure with earn-outs, rollover equity, and a named successor/CEO plan.</li>
+<li><strong>Valuation anchoring.</strong> "Discount to last round" is a negotiating frame, not a valuation method. Anchor on revenue/ARR multiples, gross-margin-adjusted, and on a standalone cash-flow view.</li>
+</ul>
+<h3 id="deal-structure-ideas">Deal structure ideas</h3>
+<ul>
+<li>Secondary for founders + early investors, <strong>primary</strong> for the turnaround budget (CFO, hires, restructuring) — keep the two clearly separated.</li>
+<li>Rollover for founder (e.g. 20–40%) to keep alignment.</li>
+<li>Earn-out or deferred consideration tied to NRR/ARR milestones to bridge valuation gaps.</li>
+<li>Consider structured instruments (preferred with a liquidation preference) if buying less than 100%.</li>
+</ul>
+<h3 id="the-playbook-as-a-100-day-plan">The playbook as a 100-day plan</h3>
+<table>
+<thead>
+<tr>
+<th>Window</th>
+<th>Focus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Days 0–30</td>
+<td>Finance baseline: ARR bridge, cohorts, cash runway, covenant/contract review; appoint interim CFO</td>
+</tr>
+<tr>
+<td>Days 30–60</td>
+<td>Org: confirm key-person risk, begin senior searches, cap-table cleanup (option pool, dead equity)</td>
+</tr>
+<tr>
+<td>Days 60–100</td>
+<td>Commercial: pricing/packaging review, sales-process reset, cost plan, KPI cadence (board pack monthly)</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section><h2 id="4-sub-strategy-b-platform-consolidation-constellation"><span class="num">04</span>Sub-strategy B — Platform / consolidation ("Constellation")</h2>
+<h3 id="the-logic">The logic</h3>
+<p>Combine turned-around A-companies and bolt-ons into a shared platform. Value comes from (1) <strong>multiple arbitrage</strong> — small assets bought at low multiples, sold/valued as a larger platform at higher multiples; (2) <strong>shared cost base</strong> — finance, hosting, support, security, procurement; (3) <strong>cross-sell</strong> where customer bases overlap.</p>
+<h3 id="honest-reading-of-the-economics">Honest reading of the economics</h3>
+<p>This is closer to <strong>permanent-capital serial acquirer</strong> (the Constellation Software model) than to a venture fund. That has consequences:</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Venture fund</th>
+<th>Roll-up / holdco</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hold period</td>
+<td>3–7 yrs</td>
+<td>10+ yrs, often indefinite</td>
+</tr>
+<tr>
+<td>Return source</td>
+<td>Exit multiple on growth</td>
+<td>Reinvested free cash flow + multiple arbitrage</td>
+</tr>
+<tr>
+<td>Fee logic</td>
+<td>Fee on committed/invested capital</td>
+<td>Operating cost recovery or holdco-level fee</td>
+</tr>
+<tr>
+<td>Leverage</td>
+<td>Rare</td>
+<td>Often used</td>
+</tr>
+<tr>
+<td>Key risk</td>
+<td>Picking winners</td>
+<td>Integration, overpaying, culture, key-person</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Implication:</strong> forcing B into a standard fund vehicle with a fixed 10-year life will either rush exits (destroying the compounding) or leave the LPs unclear on what they own. Options:
+1. <strong>Separate vehicle / SPV for B</strong>, with its own term, fee and carry.
+2. <strong>Continuation-fund style structure</strong> to move mature assets into a longer-hold vehicle with LP choice (roll or cash out).
+3. <strong>Keep B as an <em>option</em>, not a promise</strong>: A produces the assets; B is only activated when ≥3 compatible companies exist.</p>
+<h3 id="pre-conditions-before-b-makes-sense">Pre-conditions before B makes sense</h3>
+<ul>
+<li>At least 3 businesses with shared customer type or tech stack (otherwise "synergies" are theoretical).</li>
+<li>A named platform operator (not the investment team part-time).</li>
+<li>A clear standard integration playbook proven on the first two deals.</li>
+<li>An agreed rule on what shared services are mandatory vs. optional (autonomy vs. control is the usual failure point).</li>
+</ul>
+<h3 id="multiple-arbitrage-be-careful">Multiple arbitrage — be careful</h3>
+<p>The arbitrage is real only if the combined entity is <em>actually more valuable per dollar</em> (scale, diversification, predictable cash flows) and a buyer pays for it. Test it: who is the exit buyer for a $10m+ revenue platform of regional SaaS? If the answer is "a strategic or larger PE firm, at 1–2 turns higher", name three.</p>
+</section>
+<section><h2 id="5-sub-strategy-c-service-business-buyout-ai-modernization"><span class="num">05</span>Sub-strategy C — Service business buyout + AI modernization</h2>
+<h3 id="what-makes-it-attractive">What makes it attractive</h3>
+<ul>
+<li>Large, fragmented markets with owner-operators nearing retirement (succession-driven sellers).</li>
+<li>Often <strong>low software maturity</strong>, so even moderate automation can move margins meaningfully.</li>
+<li>Sticky customer relationships and regulatory moats (legal, insurance, accounting) can protect against pure-software disruption.</li>
+</ul>
+<h3 id="what-is-genuinely-hard">What is genuinely hard</h3>
+<ul>
+<li><strong>The AI thesis is not a moat by itself.</strong> Tools are available to everyone; durable advantage comes from proprietary data, workflow integration, and distribution. Be specific about which of those you'd own.</li>
+<li><strong>Regulated professions have ownership rules.</strong> Law firms, accountancies and insurance intermediaries often have restrictions on who may own them (varies by country; some jurisdictions allow alternative business structures, others do not). Verify per jurisdiction <em>before</em> spending time on a target.</li>
+<li><strong>People are the product.</strong> Fee-earners/advisers leave if they feel replaced. Plan retention and incentive design.</li>
+<li><strong>Margin gains may be competed away</strong> — if automation lowers cost for the whole sector, prices follow. Advantage is in being early <em>and</em> capturing the savings in margin before price adjusts.</li>
+<li><strong>Different skills.</strong> Operational turnaround of a services business is not the same muscle as SaaS finance fix-ups. Requires different operators.</li>
+</ul>
+<h3 id="suggested-framing-test-before-building">Suggested framing: test before building</h3>
+<p>Treat C as a <strong>pilot</strong>: one deal, a hard budget, explicit kill criteria (e.g. "if automation of workflow X doesn't give ≥X pts of margin within 12 months, we stop expanding"). Don't build a thesis document that implies a repeatable platform until one asset proves the playbook.</p>
+<h3 id="market-context">Market context</h3>
+<p>You list Constellation Software, Corgi, Lawhive, Dwelly and others. Worth building a short comparison table: owned vs. partnered, vertical, how they source, how they integrate, funding model. <em>(A good next step — happy to research it, with source links.)</em></p>
+</section>
+<section><h2 id="6-cross-cutting-mechanics"><span class="num">06</span>Cross-cutting mechanics</h2>
+<h3 id="sourcing">Sourcing</h3>
+<ul>
+<li><strong>Founder-side</strong> across all three. Build a pipeline list from: regional ecosystems, accelerator alumni, VC portfolios with stalled follow-on rounds, public signals (hiring freezes, leadership departures, dormant funding).</li>
+<li><strong>VCs as pipeline</strong> — frame as helping them with a clean exit for a portfolio company they would otherwise mark down. Relationship-driven; one clean transaction creates referral flow.</li>
+</ul>
+<h3 id="valuation-structure">Valuation &amp; structure</h3>
+<ul>
+<li>Prefer <strong>conservative revenue multiples with a gross-margin lens</strong> and cross-check with a standalone DCF.</li>
+<li>Use <strong>earn-outs and rollover</strong> rather than paying for "potential".</li>
+<li>Where founders are de facto in control (Lexar/smartocto-style), deals can be faster and cheaper — but also confirm informal side agreements, IP ownership and key-customer contracts.</li>
+</ul>
+<h3 id="ai-as-an-operational-lever">AI as an operational lever</h3>
+<ul>
+<li><strong>At company level:</strong> automated QA/testing, support deflection, leaner engineering, finance automation. Quantify per company: "hours saved × loaded cost".</li>
+<li><strong>At platform level (B):</strong> shared tooling, central data layer. Caution: don't centralize before the companies are stable.</li>
+<li>Avoid "AI-washing": every claimed AI benefit should be a line in the value-creation plan with an owner and a metric.</li>
+</ul>
+<h3 id="economics-the-fee-question">Economics: the fee question</h3>
+<p>A bucket-specific management fee is defensible <em>if</em> it is clearly tied to <strong>operating resources actually deployed</strong> (CFO bench, operating partners, shared services), and not a general uplift on a venture fund fee. LPs will ask:
+- Is the fee on invested capital, NAV, or committed capital?
+- Are operating-partner costs charged to portfolio companies <strong>in addition</strong> (double dipping)?
+- How do carry and fee interact if the bucket has a different return profile?
+Recommended: a <strong>transparent cost-recovery model</strong> (fee ≈ budgeted operating team cost) plus carry, written into the LPA/side letter.</p>
+</section>
+<section><h2 id="7-illustrative-returns-for-sub-strategy-a"><span class="num">07</span>Illustrative returns for sub-strategy A</h2>
+<p><em>Purely illustrative; assumes 100% ownership, no debt, ~$5m ARR at entry, entry at 2.0× ARR (EV $10m), plus ~$1m for turnaround costs ⇒ $11m total invested, 5-year hold. No fees or carry.</em></p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>ARR CAGR</th>
+<th>ARR at exit</th>
+<th>Exit multiple</th>
+<th>Exit value</th>
+<th>MOIC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Downside</td>
+<td>10%</td>
+<td>$8.1m</td>
+<td>2.0×</td>
+<td>$16.1m</td>
+<td>~1.5×</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>25%</td>
+<td>$15.3m</td>
+<td>3.5×</td>
+<td>$53.4m</td>
+<td>~4.9×</td>
+</tr>
+<tr>
+<td>Upside</td>
+<td>35%</td>
+<td>$22.4m</td>
+<td>5.0×</td>
+<td>$112m</td>
+<td>~10×</td>
+</tr>
+</tbody>
+</table>
+<p><strong>What you need to believe for the base case:</strong> growth re-accelerates from the current rate to 25% sustained for five years <em>and</em> the exit multiple is 75% higher than entry. Stress-test by cutting either assumption — e.g. 20% CAGR and 3.0× exit gives ~3.4×; that is still attractive, which is the point of buying cheaply. The key sensitivity is <strong>entry multiple and growth durability</strong>, not the exit.</p>
+<p>A simple model template (inputs: ARR, growth, margin, entry/exit multiples, hold, turnaround cost, ownership, rollover) would make this reusable per deal — a good next deliverable.</p>
+</section>
+<section><h2 id="8-diligence-checklist-a-adaptable-to-c"><span class="num">08</span>Diligence checklist (A, adaptable to C)</h2>
+<p><strong>Commercial:</strong> ARR bridge, cohort retention, NRR/GRR, pricing power, customer concentration (top-10 share), pipeline quality.
+<strong>Product/tech:</strong> tech debt, security posture, dependency on a single engineer, hosting costs, roadmap realism.
+<strong>Financial:</strong> gross margin by revenue type (subscription vs. services), capitalised development costs, deferred revenue, working capital, tax exposures, cash runway.
+<strong>Legal/cap table:</strong> full cap table incl. options/SAFEs/convertibles, preference terms, drag/tag, founder vesting, IP assignment, change-of-control clauses in key contracts.
+<strong>People:</strong> key-person map, compensation vs. market, retention packages, culture.
+<strong>Founder:</strong> honest conversation on motivation, post-deal role, and the plan if they leave.</p>
+</section>
+<section><h2 id="9-key-risks-mitigants"><span class="num">09</span>Key risks &amp; mitigants</h2>
+<table>
+<thead>
+<tr>
+<th>Risk</th>
+<th>Why it matters</th>
+<th>Mitigant</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adverse selection</td>
+<td>Cheap for a reason</td>
+<td>Deep cohort diligence; walk-away discipline</td>
+</tr>
+<tr>
+<td>Execution capacity</td>
+<td>Turnaround needs hands-on operators</td>
+<td>Dedicated operating team; limit concurrent deals</td>
+</tr>
+<tr>
+<td>Vehicle mismatch (esp. B)</td>
+<td>Hold period / fee model conflicts with fund terms</td>
+<td>Separate vehicle or defined option structure</td>
+</tr>
+<tr>
+<td>Key-person (founder + team)</td>
+<td>Value walks out the door</td>
+<td>Rollover, earn-out, retention pool</td>
+</tr>
+<tr>
+<td>Valuation drift</td>
+<td>Competition for "cheap" assets rises</td>
+<td>Disciplined entry-multiple ceiling</td>
+</tr>
+<tr>
+<td>Concentration</td>
+<td>Regional focus, correlated customers</td>
+<td>Diversify by vertical/geography within the screen</td>
+</tr>
+<tr>
+<td>Thesis drift</td>
+<td>Three sub-strategies can dilute focus</td>
+<td>Sequence: A → prove → B; C as a time-boxed pilot</td>
+</tr>
+<tr>
+<td>AI-moat overstatement (C)</td>
+<td>Tools commoditize</td>
+<td>Require proprietary data/workflow/distribution advantage</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section><h2 id="10-suggested-sequencing"><span class="num">10</span>Suggested sequencing</h2>
+<ol>
+<li><strong>Now:</strong> define A's investment criteria precisely (size, growth, margin, geography, ownership %, ticket) and build a pipeline of 20–30 names.</li>
+<li><strong>First 2–3 deals:</strong> execute A, document the playbook, measure value creation vs. plan.</li>
+<li><strong>Decision gate:</strong> if ≥3 compatible companies and a named platform operator exist, design the vehicle for B.</li>
+<li><strong>In parallel, low-cost:</strong> research C — one-page market map, regulatory review, shortlist of 1–2 candidate sectors; no capital committed until criteria are written.</li>
+</ol>
+</section>
+<section><h2 id="11-open-questions-for-discussion"><span class="num">11</span>Open questions for discussion</h2>
+<ol>
+<li>Ticket size and ownership target for A — is the deal flow fund-sized, or are many of these too small?</li>
+<li>Is the fund's current LPA flexible on control stakes, leverage, and fees for this bucket?</li>
+<li>Who are the operators (CFO bench, platform lead)? Internal hires, operating partners, or an external network?</li>
+<li>For B: what is the intended exit — sale of the platform, IPO, or indefinite hold?</li>
+<li>For C: which one or two sectors, and in which jurisdictions, are even allowed to be owned by a non-professional investor?</li>
+<li>How do we define "success" for the bucket: MOIC target, DPI timing, or platform value?</li>
+<li>What does the firm do better than a traditional lower-mid-market PE firm that targets the same assets?</li>
+</ol>
+</section>
+<section><h2 id="12-suggested-next-steps"><span class="num">12</span>Suggested next steps</h2>
+<ul>
+<li>[ ] Write one-page investment criteria for A.</li>
+<li>[ ] Build the deal-level returns model (template).</li>
+<li>[ ] Case studies: Everfield, Tradecore, Lexar/smartocto — what worked, what the structure was.</li>
+<li>[ ] Comparison table of "AI × ownership" players (Constellation, Corgi, Lawhive, Dwelly, others).</li>
+<li>[ ] Fee/vehicle options memo for B (separate vehicle vs. continuation structure).</li>
+<li>[ ] Jurisdiction check for regulated-service ownership (C).</li>
+</ul>
+<hr />
+<p><em>Original thesis © Jan Kobler (draft). Expansion and analysis by Claude (Anthropic); for discussion only.</em></p></section>
+</main>
+</div>
+<script>
+const links=[...document.querySelectorAll('aside a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-20% 0px -70% 0px'});
+document.querySelectorAll('h2[id]').forEach(h=>io.observe(h));
+document.querySelectorAll('li').forEach(li=>{li.innerHTML=li.innerHTML.replace(/^\[ \]\s*/,'☐ ')});
+</script>
+</body>
+</html>

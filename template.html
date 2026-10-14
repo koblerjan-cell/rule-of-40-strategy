@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rule of 40 Strategy</title>
+<meta name="description" content="Draft investment thesis and expanded analysis: SaaS turnaround, platform consolidation and AI-modernised services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf8f4;--surface:#fff;--ink:#1c1b19;--muted:#6b675f;--line:#e7e2d9;--accent:#1f5f4a;--accent-soft:#e6f0eb;--warn:#fbf3e0;--warn-line:#e8d49a;--code:#f1ede5}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--surface:#1c1c1a;--ink:#ecebe6;--muted:#a09c92;--line:#2e2d29;--accent:#6fcfae;--accent-soft:#1d2d27;--warn:#2a2518;--warn-line:#5c4f27;--code:#242320}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.layout{display:grid;grid-template-columns:260px minmax(0,1fr);max-width:1180px;margin:0 auto;gap:56px;padding:0 24px}
+aside{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;padding:48px 0}
+aside .brand{font:600 13px Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+aside a{display:flex;gap:10px;padding:6px 10px;margin-left:-10px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:14px;line-height:1.4}
+aside a span{font-variant-numeric:tabular-nums;opacity:.6;min-width:20px}
+aside a:hover,aside a.on{background:var(--accent-soft);color:var(--accent)}
+main{padding:56px 0 96px;min-width:0}
+header.hero{padding-bottom:36px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.kicker{font:600 13px Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font:600 clamp(34px,5vw,54px)/1.08 Fraunces,Georgia,serif;letter-spacing:-.02em;margin:10px 0 18px}
+header.hero blockquote{margin:20px 0 0;padding:14px 18px;background:var(--warn);border:1px solid var(--warn-line);border-radius:12px;font-size:14px;color:var(--ink)}
+header.hero blockquote p{margin:0}
+section{padding-top:48px}
+h2{font:600 30px/1.2 Fraunces,Georgia,serif;letter-spacing:-.01em;margin:0 0 18px;display:flex;align-items:baseline;gap:14px}
+h2 .num{font:600 14px Inter;color:var(--accent);background:var(--accent-soft);padding:3px 9px;border-radius:99px}
+h3{font-size:18px;margin:32px 0 8px;font-weight:600}
+p,li{max-width:70ch}
+ul,ol{padding-left:22px}li{margin:4px 0}
+a{color:var(--accent)}
+strong{font-weight:600}
+code{background:var(--code);padding:2px 6px;border-radius:5px;font-size:.9em}
+em{color:var(--muted)}
+blockquote{margin:16px 0;padding:4px 18px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 10px 10px 0}
+table{width:100%;border-collapse:separate;border-spacing:0;margin:20px 0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:14.5px;line-height:1.5;display:block;overflow-x:auto}
+th,td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);min-width:120px}
+th{background:var(--accent-soft);color:var(--accent);font-weight:600;font-size:13px}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600}
+ul:has(input[type=checkbox]){list-style:none;padding-left:0}
+hr{border:0;border-top:1px solid var(--line);margin:48px 0 16px}
+footer em{font-size:13px}
+@media(max-width:860px){.layout{grid-template-columns:1fr;gap:0}aside{display:none}main{padding-top:32px}h2{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside><div class="brand">Rule of 40 Strategy</div>
+{{NAV}}
+</aside>
+<main>
+<header class="hero"><div class="kicker">Fund IV · Idea repository</div>
+<h1>Rule of 40 Strategy</h1>
+{{INTRO}}
+</header>
+{{BODY}}
+</main>
+</div>
+<script>
+const links=[...document.querySelectorAll('aside a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-20% 0px -70% 0px'});
+document.querySelectorAll('h2[id]').forEach(h=>io.observe(h));
+document.querySelectorAll('li').forEach(li=>{li.innerHTML=li.innerHTML.replace(/^\[ \]\s*/,'☐ ')});
+</script>
+</body>
+</html>
