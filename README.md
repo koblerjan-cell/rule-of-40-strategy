@@ -13,17 +13,7 @@ Buy control of regional B2B companies that are fundamentally sound but under-man
 | Maturity | Most defined | Economics resemble PE roll-up | Most exploratory |
 | Key fit question | Is it a fund-sized deal? | Does the vehicle allow it? | Is software/AI really the moat? |
 
-## 2. Is "Rule of 40" the right screen?
-
-The loose use is sensible, but it hides three traps worth making explicit:
-
-1. **Growth and margin are not interchangeable.** A 10% grower at 30% margin and a 40% grower at 0% margin both score "40" but have very different value and turnaround paths. Your thesis is clearly about the second profile (growth with room to fix margin). Say so: screen on *growth ≥ ~25–30% **and** margin ≥ roughly −10%*, not on the sum.
-2. **Growth quality matters more than level.** Check net revenue retention, gross margin, and whether growth is bought (discounting, services-heavy) or organic. 35% growth from 150% NRR is a different asset from 35% growth from new-logo discounting.
-3. **Why is it stuck?** The thesis only works if the diagnosis is *management/capital-structure*, not *product/market*. That diagnosis is the single most important thing to test in diligence (see §8).
-
-**Suggested scorecard** (score 1–5, weight to taste): growth quality · gross margin · NRR/logo churn · customer concentration · founder situation (fatigue vs. misaligned) · cap-table complexity · fixable-by-us share of the gap to "Rule of 40".
-
-## 3. Sub-strategy A — SaaS secondary buyout & turnaround
+## 2. Sub-strategy A — SaaS secondary buyout & turnaround
 
 ### Why it can work
 - **Forced-seller dynamics.** Many 2020–22 vintage VC-backed SaaS companies raised at valuations the market no longer supports. Their investors need distributions or write-offs, and founders are tired. A credible, fast, certain offer has real value.
@@ -49,7 +39,7 @@ The loose use is sensible, but it hides three traps worth making explicit:
 | Days 30–60 | Org: confirm key-person risk, begin senior searches, cap-table cleanup (option pool, dead equity) |
 | Days 60–100 | Commercial: pricing/packaging review, sales-process reset, cost plan, KPI cadence (board pack monthly) |
 
-## 4. Sub-strategy B — Platform / consolidation ("Constellation")
+## 3. Sub-strategy B — Platform / consolidation ("Constellation")
 
 ### The logic
 Combine turned-around A-companies and bolt-ons into a shared platform. Value comes from (1) **multiple arbitrage** — small assets bought at low multiples, sold/valued as a larger platform at higher multiples; (2) **shared cost base** — finance, hosting, support, security, procurement; (3) **cross-sell** where customer bases overlap.
@@ -79,7 +69,7 @@ This is closer to **permanent-capital serial acquirer** (the Constellation Softw
 ### Multiple arbitrage — be careful
 The arbitrage is real only if the combined entity is *actually more valuable per dollar* (scale, diversification, predictable cash flows) and a buyer pays for it. Test it: who is the exit buyer for a $10m+ revenue platform of regional SaaS? If the answer is "a strategic or larger PE firm, at 1–2 turns higher", name three.
 
-## 5. Sub-strategy C — Service business buyout + AI modernization
+## 4. Sub-strategy C — Service business buyout + AI modernization
 
 ### What makes it attractive
 - Large, fragmented markets with owner-operators nearing retirement (succession-driven sellers).
@@ -99,7 +89,7 @@ Treat C as a **pilot**: one deal, a hard budget, explicit kill criteria (e.g. "i
 ### Market context
 You list Constellation Software, Corgi, Lawhive, Dwelly and others. Worth building a short comparison table: owned vs. partnered, vertical, how they source, how they integrate, funding model. *(A good next step — happy to research it, with source links.)*
 
-## 6. Cross-cutting mechanics
+## 5. Cross-cutting mechanics
 
 ### Sourcing
 - **Founder-side** across all three. Build a pipeline list from: regional ecosystems, accelerator alumni, VC portfolios with stalled follow-on rounds, public signals (hiring freezes, leadership departures, dormant funding).
@@ -122,7 +112,7 @@ A bucket-specific management fee is defensible *if* it is clearly tied to **oper
 - How do carry and fee interact if the bucket has a different return profile?
 Recommended: a **transparent cost-recovery model** (fee ≈ budgeted operating team cost) plus carry, written into the LPA/side letter.
 
-## 7. Illustrative returns for sub-strategy A
+## 6. Illustrative returns for sub-strategy A
 
 *Purely illustrative; assumes 100% ownership, no debt, ~$5m ARR at entry, entry at 2.0× ARR (EV $10m), plus ~$1m for turnaround costs ⇒ $11m total invested, 5-year hold. No fees or carry.*
 
@@ -136,7 +126,7 @@ Recommended: a **transparent cost-recovery model** (fee ≈ budgeted operating t
 
 A simple model template (inputs: ARR, growth, margin, entry/exit multiples, hold, turnaround cost, ownership, rollover) would make this reusable per deal — a good next deliverable.
 
-## 8. Diligence checklist (A, adaptable to C)
+## 7. Diligence checklist (A, adaptable to C)
 
 **Commercial:** ARR bridge, cohort retention, NRR/GRR, pricing power, customer concentration (top-10 share), pipeline quality.
 **Product/tech:** tech debt, security posture, dependency on a single engineer, hosting costs, roadmap realism.
@@ -145,7 +135,7 @@ A simple model template (inputs: ARR, growth, margin, entry/exit multiples, hold
 **People:** key-person map, compensation vs. market, retention packages, culture.
 **Founder:** honest conversation on motivation, post-deal role, and the plan if they leave.
 
-## 9. Key risks & mitigants
+## 8. Key risks & mitigants
 
 | Risk | Why it matters | Mitigant |
 |---|---|---|
@@ -158,14 +148,14 @@ A simple model template (inputs: ARR, growth, margin, entry/exit multiples, hold
 | Thesis drift | Three sub-strategies can dilute focus | Sequence: A → prove → B; C as a time-boxed pilot |
 | AI-moat overstatement (C) | Tools commoditize | Require proprietary data/workflow/distribution advantage |
 
-## 10. Suggested sequencing
+## 9. Suggested sequencing
 
 1. **Now:** define A's investment criteria precisely (size, growth, margin, geography, ownership %, ticket) and build a pipeline of 20–30 names.
 2. **First 2–3 deals:** execute A, document the playbook, measure value creation vs. plan.
 3. **Decision gate:** if ≥3 compatible companies and a named platform operator exist, design the vehicle for B.
 4. **In parallel, low-cost:** research C — one-page market map, regulatory review, shortlist of 1–2 candidate sectors; no capital committed until criteria are written.
 
-## 11. Open questions for discussion
+## 10. Open questions for discussion
 
 1. Ticket size and ownership target for A — is the deal flow fund-sized, or are many of these too small?
 2. Is the fund's current LPA flexible on control stakes, leverage, and fees for this bucket?
@@ -175,7 +165,7 @@ A simple model template (inputs: ARR, growth, margin, entry/exit multiples, hold
 6. How do we define "success" for the bucket: MOIC target, DPI timing, or platform value?
 7. What does the firm do better than a traditional lower-mid-market PE firm that targets the same assets?
 
-## 12. Suggested next steps
+## 11. Suggested next steps
 
 - [ ] Write one-page investment criteria for A.
 - [ ] Build the deal-level returns model (template).
