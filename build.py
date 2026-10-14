@@ -12,12 +12,13 @@ for s in sections:
     num = re.match(r'(\d+)\.\s*(.*)', title)
     label = num.group(2) if num else title
     n = num.group(1).zfill(2) if num else ''
-    nav.append(f'<a href="#{sid}"><span>{n}</span>{label}</a>')
+    nav.append(f'<a href="#{sid}">{n}</a>')
     s = s.replace(mm.group(0), f'<h2 id="{sid}"><span class="num">{n}</span>{label}</h2>', 1)
     out.append(f'<section>{s}</section>')
 # intro: pull title, status blockquote
 intro = re.sub(r'<h1[^>]*>.*?</h1>', '', intro, count=1, flags=re.S)
 intro = intro.replace('<hr />', '')
+intro = re.sub(r'</?blockquote>', '', intro)
 html = open('template.html', encoding='utf-8').read()
 html = html.replace('{{NAV}}', '\n'.join(nav)).replace('{{INTRO}}', intro).replace('{{BODY}}', '\n'.join(out))
 open('index.html', 'w', encoding='utf-8').write(html)
